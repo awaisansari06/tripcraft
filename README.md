@@ -415,17 +415,9 @@ Special thanks to these amazing projects and services:
 
 ---
 
-## ⭐ Star History
-
-If you find this project useful, please consider giving it a star!
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/smart-journey&type=Date)](https://star-history.com/#yourusername/smart-journey&Date)
-
----
-
 <div align="center">
 
-### Made with ❤️ by the SmartJourney Team
+### Made with ❤️ by the Awais Ansari
 
 **[⬆ Back to Top](#-smartjourney)**
 

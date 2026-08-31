@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export function PopularCityList() {
     return (
-        <div className="w-full py-20 bg-linear-to-b from-white via-orange-50/40 to-white">
+        <div className="w-full py-20 bg-linear-to-b from-white via-orange-50/40 to-white dark:from-black dark:via-orange-950/10 dark:to-black">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                     <div className="text-center md:text-left">

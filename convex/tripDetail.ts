@@ -25,7 +25,7 @@ export const GetUserTrips = query({
     },
     handler: async (ctx, args) => {
         const trips = await ctx.db.query("TripDetailTable")
-            .filter(q => q.eq(q.field("uid"), args.uid))
+            .withIndex("by_uid", q => q.eq("uid", args.uid))
             .collect();
         return trips;
     }
@@ -37,7 +37,7 @@ export const GetTrip = query({
     },
     handler: async (ctx, args) => {
         const trip = await ctx.db.query("TripDetailTable")
-            .filter(q => q.eq(q.field("tripId"), args.tripId))
+            .withIndex("by_tripId", q => q.eq("tripId", args.tripId))
             .first();
         return trip;
     },
@@ -50,7 +50,7 @@ export const UpdateTrip = mutation({
     },
     handler: async (ctx, args) => {
         const trip = await ctx.db.query("TripDetailTable")
-            .filter(q => q.eq(q.field("tripId"), args.tripId))
+            .withIndex("by_tripId", q => q.eq("tripId", args.tripId))
             .first();
 
         if (!trip) {

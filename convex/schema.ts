@@ -12,7 +12,7 @@ export default defineSchema({
         tripId: v.string(),
         tripDetail: v.any(),
         uid: v.id('UserTable')
-    }),
+    }).index("by_tripId", ["tripId"]).index("by_uid", ["uid"]),
     MessagesTable: defineTable({
         tripId: v.string(),
         role: v.string(),

@@ -70,7 +70,7 @@ function Itinerary({
             images: images && images.length > 0 ? images : [imageUrl],
             context: context,
             price: activity.ticket_pricing,
-            rating: 4.5,
+            rating: activity.rating ?? null,
             duration: activity.time_travel_each_location,
             bestTime: activity.best_time_to_visit,
             geoCoordinates: typeof activity.geo_coordinates === 'string'

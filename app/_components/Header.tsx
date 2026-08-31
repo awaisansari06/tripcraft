@@ -8,7 +8,8 @@ import { Button } from '@/components/ui/button';
 import GradientButton from '@/components/ui/gradient-button';
 import { UserButton, SignedIn, SignedOut, SignInButton, SignUpButton, SignOutButton } from "@clerk/nextjs";
 import { usePathname, useRouter } from 'next/navigation';
-import { Menu, X, Home, DollarSign, Mail, LayoutDashboard, Plane, LogOut } from 'lucide-react';
+import { Menu, X, Home, DollarSign, Mail, LayoutDashboard, Plane, LogOut, Sun, Moon } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 const menuOptions = [
   {
@@ -35,6 +36,11 @@ function Header() {
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Avoid hydration mismatch — only render theme toggle after mount
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,6 +122,20 @@ function Header() {
         <div className='flex gap-2 items-center'>
           {/* DESKTOP: Action Buttons (≥md) */}
           <div className="hidden md:flex gap-2 items-center">
+            {/* Theme Toggle */}
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                aria-label="Toggle dark mode"
+              >
+                {theme === 'dark' ? (
+                  <Sun className="w-5 h-5 text-amber-400" />
+                ) : (
+                  <Moon className="w-5 h-5" />
+                )}
+              </button>
+            )}
             <SignedIn>
               <GradientButton variant="outline" onClick={() => router.push('/dashboard')}>Dashboard</GradientButton>
               {pathname !== '/create-new-trip' &&

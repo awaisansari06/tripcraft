@@ -46,9 +46,9 @@ function PlaceCardItem({ activity, onSelect }: Props) {
     return (
         <div
             onClick={() => onSelect(imageSrc, photoUrls.length > 0 ? photoUrls : [imageSrc])}
-            className="hover:scale-[1.02] transition-all cursor-pointer border rounded-xl shadow-sm bg-white overflow-hidden group"
+            className="hover:scale-[1.02] transition-all cursor-pointer border border-gray-100 dark:border-zinc-800 rounded-2xl shadow-sm bg-white dark:bg-zinc-900 overflow-hidden group"
         >
-            <div className="relative h-[180px] w-full">
+            <div className="relative h-[180px] w-full bg-gray-100 dark:bg-zinc-800">
                 <Image
                     src={imageSrc}
                     alt={activity?.place_name || "Place Image"}
@@ -59,17 +59,17 @@ function PlaceCardItem({ activity, onSelect }: Props) {
 
             <div className="p-4 flex flex-col gap-2 h-[160px] justify-between">
                 <div>
-                    <h2 className="font-bold text-lg line-clamp-1">{activity?.place_name}</h2>
-                    <p className="text-xs text-gray-500 line-clamp-2 mt-1">
+                    <h2 className="font-bold text-lg text-gray-900 dark:text-white line-clamp-1">{activity?.place_name}</h2>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mt-1">
                         {activity?.place_details}
                     </p>
                 </div>
                 <div className="flex flex-col gap-1 mt-2">
                     <div className="flex justify-between items-center">
-                        <p className="text-sm text-blue-600 font-medium truncate">🎫 {activity?.ticket_pricing}</p>
-                        <p className="text-sm text-yellow-600 shrink-0">⭐ 4.5</p>
+                        <p className="text-sm text-blue-600 dark:text-blue-400 font-medium truncate">🎫 {activity?.ticket_pricing}</p>
+                        <p className="text-sm text-amber-500 dark:text-amber-400 font-bold shrink-0">⭐ {activity?.best_time_to_visit ? activity.best_time_to_visit : "Top Pick"}</p>
                     </div>
-                    <p className="text-xs text-orange-600 truncate">⏰ {activity?.time_travel_each_location}</p>
+                    <p className="text-xs text-orange-600 dark:text-orange-400 font-medium truncate">⏰ {activity?.time_travel_each_location}</p>
                 </div>
             </div>
         </div>

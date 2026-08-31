@@ -138,7 +138,7 @@ function Itinerary({
                                         const el = document.getElementById(`day-${day}`);
                                         el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                                     }}
-                                    className="text-sm text-left text-gray-500 hover:text-primary transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-primary"
+                                    className="text-sm text-left text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-primary"
                                 >
                                     Day {day}
                                 </button>

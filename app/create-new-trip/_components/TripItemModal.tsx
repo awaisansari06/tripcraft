@@ -253,21 +253,6 @@ function TripItemModal({ isOpen, onClose, item }: Props) {
 
                     {/* Price & Primary Info Grid (Chips) */}
                     <div className="grid grid-cols-2 gap-3">
-                        {/* Personal Notes (Contextual)
-                        <div className="col-span-2 bg-yellow-50 dark:bg-yellow-900/10 p-3 rounded-xl border border-yellow-100 dark:border-yellow-900/30">
-                            <h4 className="text-[10px] font-bold text-yellow-700 dark:text-yellow-500 uppercase tracking-wider mb-1 flex items-center gap-1">
-                                📝 Notes
-                            </h4>
-                            <textarea
-                                className="w-full bg-transparent border-none p-0 text-sm text-gray-700 dark:text-yellow-100 placeholder-yellow-700/40 focus:ring-0 resize-none min-h-[24px] leading-tight"
-                                placeholder="Add personal note..."
-                                value={note}
-                                onChange={(e) => setNote(e.target.value)}
-                            />
-                            <p className="text-[10px] text-yellow-600/60 mt-1 text-right italic">
-                                {savedPlace ? "Saved" : "Type to auto-save"}
-                            </p>
-                        </div> */}
 
                         {item.type === 'hotel' ? (
                             <>

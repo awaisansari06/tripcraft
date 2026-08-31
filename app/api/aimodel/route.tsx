@@ -289,14 +289,23 @@ export async function POST(request: NextRequest) {
       hasPremiumAccess = subscription === "monthly" || subscription === "annually";
     }
 
-    // 1. Separate the last user message from the history
+    // Extract the last user message upfront (used for both generation detection and the chat call)
     const lastMessage = messages[messages.length - 1];
-    const isGenerationRequest = lastMessage.content.toLowerCase().includes("generate") || isFinal;
+
+    // Determine if this is a trip-generation request.
+    // We validate server-side by checking both the client flag AND the message content
+    // to prevent a spoofed isFinal:true from draining credits with arbitrary messages.
+    const GENERATION_KEYWORDS = ["generate", "create my trip", "generate my", "make my trip", "plan my trip", "build my trip"];
+    const lastMessageContent = lastMessage.content?.toLowerCase() ?? "";
+    const messageIndicatesGeneration = GENERATION_KEYWORDS.some(kw => lastMessageContent.includes(kw));
+    // A generation request requires BOTH the client to signal isFinal AND the message to match a generation keyword.
+    // This prevents a malicious client from setting isFinal=true on an arbitrary message to consume credits.
+    const isGenerationRequest = Boolean(isFinal) && messageIndicatesGeneration;
 
     // Select the appropriate Arcjet instance based on user type
     const arcjetInstance = hasPremiumAccess ? ajPremium : ajFree;
 
-    console.log(`[TripGen] User: ${email}, Premium: ${hasPremiumAccess}, Requesting Deduction: ${isGenerationRequest}`);
+    console.log(`[TripGen] User: ${email}, Premium: ${hasPremiumAccess}, Generation: ${isGenerationRequest} (isFinal=${isFinal}, msgMatch=${messageIndicatesGeneration})`);
 
     // Check rate limits for both free and premium users
     const decision = await arcjetInstance.protect(request, {
@@ -319,7 +328,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // 1. Separate the last user message from the history (reusing variable)
+    // Separate the history (all messages except the last one, which we already have)
     const historyMessages = messages.slice(0, -1);
 
     // 2. Select Prompt

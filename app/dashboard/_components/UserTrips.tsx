@@ -84,7 +84,7 @@ function UserTrips() {
                     <p className="text-sm text-gray-500">Manage and view your planned itineraries</p>
                 </div>
                 <div className="mt-4 md:mt-0">
-                    <StatsOverview totalTrips={trips.length} user={userDetail} />
+                <StatsOverview totalTrips={trips.length} user={userDetail} loading={loading} />
                 </div>
             </div>
 

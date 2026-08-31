@@ -74,6 +74,13 @@ function Hero() {
         }
     }
 
+    const onKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            onSend();
+        }
+    };
+
     return (
         <div className="relative flex justify-center bg-transparent pt-24 pb-12 overflow-hidden">
             <FloatingIcons />
@@ -97,6 +104,7 @@ function Hero() {
                                 placeholder={text}
                                 className="min-h-[70px] w-full resize-none border-none bg-transparent shadow-none focus-visible:ring-0 text-lg p-3"
                                 onChange={(e) => setUserInput(e.target.value)}
+                                onKeyDown={onKeyDown}
                                 value={userInput}
                             />
                             <Button size={"icon"} className="absolute bottom-4 right-4 bg-primary hover:bg-primary/90 rounded-xl w-12 h-12 transition-transform hover:scale-110" onClick={() => onSend()}>

@@ -6,7 +6,7 @@ import { auth, currentUser } from "@clerk/nextjs/server";
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 const model = genAI.getGenerativeModel({
-  model: "gemini-3.5-flash",
+  model: "gemini-3.5-flash-lite",
   generationConfig: {
     responseMimeType: "application/json", // Ensures strict JSON response
   },
@@ -123,22 +123,18 @@ UI rules:
 - Use "final" only when ALL required info is collected and you're generating the final trip plan
 
 ========================
-Final Trip Plan Output
+Final Step (Ready to Plan)
 ========================
-When ALL required information is collected (STANDARD FLOW steps 1-7 completed),
-generate a complete final trip plan including:
-- Summary (source, destination, group size, budget, duration)
-- Day-by-day itinerary (clear and structured)
-- Food suggestions
-- Local transport tips
-- Estimated budget breakdown (rough)
-- Extra tips + hidden gems
+When ALL required information is collected (steps 1-8 completed):
+- Set "ui": "final"
+- In "resp", output ONLY a short, friendly 1-2 sentence confirmation (e.g., "Great, I've got all your details! Review your trip summary below and click 'Generate Plan' to create your full custom itinerary and hotel recommendations.").
+- CRITICAL: DO NOT write any day-by-day itinerary, places, markdown tables, or long paragraphs in "resp". The UI will display the summary card and generate the complete structured plan when the user clicks Generate Plan.
 
 ========================
 IMPORTANT OUTPUT FORMAT
 ========================
 You MUST ALWAYS respond ONLY in strict JSON format.
-No extra text. No markdown. No explanations.
+No extra text. No markdown outside of the JSON string values. No explanations.
 
 JSON schema:
 {

@@ -49,10 +49,10 @@ const TRIP_STYLES = [
 
 export default function TripStyleUi({ value, onSelect }: TripStyleUiProps) {
     return (
-        <div className="w-full max-w-xl rounded-2xl border bg-white p-4 shadow-sm">
+        <div className="w-full max-w-xl rounded-2xl border border-gray-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 shadow-sm">
             <div>
-                <h3 className="text-sm font-semibold text-gray-900">Travel vibe</h3>
-                <p className="text-xs text-gray-500">What's your travel mood?</p>
+                <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Travel vibe</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400">What's your travel mood?</p>
             </div>
 
             <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -65,26 +65,26 @@ export default function TripStyleUi({ value, onSelect }: TripStyleUiProps) {
                             onClick={() => onSelect(item.id)}
                             className={cn(
                                 "flex items-start gap-3 rounded-2xl border p-4 text-left transition",
-                                "hover:bg-gray-50",
+                                "hover:bg-gray-50 dark:hover:bg-zinc-800",
                                 active
-                                    ? "border-primary bg-primary/5 ring-2 ring-primary/20"
-                                    : "border-gray-200"
+                                    ? "border-primary bg-primary/5 dark:bg-primary/20 ring-2 ring-primary/20"
+                                    : "border-gray-200 dark:border-zinc-700"
                             )}
                         >
                             <div
                                 className={cn(
                                     "flex h-10 w-10 items-center justify-center rounded-xl text-lg",
-                                    active ? "bg-primary/15" : "bg-gray-100"
+                                    active ? "bg-primary/15" : "bg-gray-100 dark:bg-zinc-800"
                                 )}
                             >
                                 {item.emoji}
                             </div>
 
                             <div className="flex-1">
-                                <div className="text-sm font-semibold text-gray-900">
+                                <div className="text-sm font-semibold text-gray-900 dark:text-white">
                                     {item.title}
                                 </div>
-                                <div className="text-xs text-gray-500">{item.desc}</div>
+                                <div className="text-xs text-gray-500 dark:text-gray-400">{item.desc}</div>
                             </div>
                         </button>
                     );
@@ -92,8 +92,8 @@ export default function TripStyleUi({ value, onSelect }: TripStyleUiProps) {
             </div>
 
             {value && (
-                <div className="mt-4 text-xs text-gray-500">
-                    Selected: <span className="font-medium text-gray-700">{value}</span>
+                <div className="mt-4 text-xs text-gray-500 dark:text-gray-400">
+                    Selected: <span className="font-medium text-gray-700 dark:text-gray-200">{value}</span>
                 </div>
             )}
         </div>

@@ -46,9 +46,9 @@ function HotelCardItem({ hotel, onSelect }: Props) {
     return (
         <div
             onClick={() => onSelect?.(imageSrc, photoUrls.length > 0 ? photoUrls : [imageSrc])}
-            className="hover:scale-[1.02] transition-all cursor-pointer border rounded-xl shadow-sm bg-white overflow-hidden group"
+            className="hover:scale-[1.02] transition-all cursor-pointer border border-gray-100 dark:border-zinc-800 rounded-2xl shadow-sm bg-white dark:bg-zinc-900 overflow-hidden group"
         >
-            <div className="relative h-[180px] w-full">
+            <div className="relative h-[180px] w-full bg-gray-100 dark:bg-zinc-800">
                 <Image
                     src={imageSrc}
                     alt={hotel?.hotel_name || "Hotel Image"}
@@ -59,14 +59,14 @@ function HotelCardItem({ hotel, onSelect }: Props) {
 
             <div className="p-4 flex flex-col gap-2 h-[160px] justify-between">
                 <div>
-                    <h2 className="font-bold text-lg line-clamp-1">{hotel?.hotel_name}</h2>
-                    <p className="text-xs text-gray-500 line-clamp-2 mt-1">
+                    <h2 className="font-bold text-lg text-gray-900 dark:text-white line-clamp-1">{hotel?.hotel_name}</h2>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mt-1">
                         📍 {hotel?.hotel_address}
                     </p>
                 </div>
                 <div className="flex justify-between items-center mt-2">
-                    <p className="text-sm text-green-700 font-medium">💵 {hotel?.price_per_night}</p>
-                    <p className="text-sm font-bold">⭐ {hotel?.rating}</p>
+                    <p className="text-sm text-green-600 dark:text-green-400 font-semibold">💵 {hotel?.price_per_night}</p>
+                    <p className="text-sm font-bold text-amber-500 dark:text-amber-400">⭐ {hotel?.rating}</p>
                 </div>
             </div>
         </div>

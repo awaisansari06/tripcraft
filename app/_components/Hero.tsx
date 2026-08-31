@@ -146,18 +146,18 @@ function Hero() {
 
                 {/* Trust / Stats */}
                 <div className="flex flex-col items-center gap-6 mt-6">
-                    <div className="flex flex-wrap justify-center gap-8 text-sm font-semibold text-gray-600 md:gap-16 md:text-base">
+                    <div className="flex flex-wrap justify-center gap-8 text-sm font-semibold text-gray-600 dark:text-gray-300 md:gap-16 md:text-base">
                         <div className="flex flex-col items-center gap-1">
-                            <span className="text-xl font-bold text-gray-900">10K+</span>
-                            <span className="text-gray-500">Trips planned</span>
+                            <span className="text-xl font-bold text-gray-900 dark:text-white">10K+</span>
+                            <span className="text-gray-500 dark:text-gray-400">Trips planned</span>
                         </div>
                         <div className="flex flex-col items-center gap-1">
-                            <span className="text-xl font-bold text-gray-900">1K+</span>
-                            <span className="text-gray-500">Happy Users</span>
+                            <span className="text-xl font-bold text-gray-900 dark:text-white">1K+</span>
+                            <span className="text-gray-500 dark:text-gray-400">Happy Users</span>
                         </div>
                         <div className="flex flex-col items-center gap-1">
-                            <span className="text-xl font-bold text-gray-900">Instant</span>
-                            <span className="text-gray-500">AI Generation</span>
+                            <span className="text-xl font-bold text-gray-900 dark:text-white">Instant</span>
+                            <span className="text-gray-500 dark:text-gray-400">AI Generation</span>
                         </div>
                     </div>
 

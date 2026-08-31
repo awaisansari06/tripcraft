@@ -13,11 +13,11 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-white overflow-hidden">
+    <div className="relative min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-300 overflow-hidden">
       {/* Ambient Glow Orbs */}
-      <div className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-orange-400/10 blur-[140px]" />
-      <div className="pointer-events-none absolute top-40 left-20 h-[420px] w-[420px] rounded-full bg-pink-500/10 blur-[140px]" />
-      <div className="pointer-events-none absolute top-[520px] right-10 h-[480px] w-[480px] rounded-full bg-purple-500/10 blur-[150px]" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-orange-400/10 dark:bg-orange-500/15 blur-[140px]" />
+      <div className="pointer-events-none absolute top-40 left-20 h-[420px] w-[420px] rounded-full bg-pink-500/10 dark:bg-pink-500/15 blur-[140px]" />
+      <div className="pointer-events-none absolute top-[520px] right-10 h-[480px] w-[480px] rounded-full bg-purple-500/10 dark:bg-purple-500/15 blur-[150px]" />
 
       {/* Your actual page content */}
       <div className="relative z-10">

@@ -109,14 +109,14 @@ export default function FeaturesGrid() {
   const [activeFeature, setActiveFeature] = useState<FeatureKey | null>(null);
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-muted/30 dark:bg-black/30">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Everything you need
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             From inspiration to detailed daily plans, we've got you covered.
           </p>
         </div>
@@ -128,17 +128,17 @@ export default function FeaturesGrid() {
             return (
               <div
                 key={key}
-                className="p-6 glass hover:shadow-xl hover:-translate-y-1 hover:bg-white/75 transition-all duration-300 group flex flex-col h-full border border-white/40 rounded-2xl"
+                className="p-6 glass hover:shadow-xl hover:-translate-y-1 hover:bg-white/75 dark:hover:bg-zinc-900/75 transition-all duration-300 group flex flex-col h-full border border-white/40 dark:border-white/10 rounded-2xl"
               >
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-4 shadow-xs group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-white dark:bg-zinc-800 rounded-xl flex items-center justify-center mb-4 shadow-xs group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
 
-                <h3 className="text-xl font-bold mb-2 text-gray-900">
+                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
                   {feature.title}
                 </h3>
 
-                <p className="text-gray-500 text-sm leading-relaxed mb-4 grow">
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4 grow">
                   {feature.desc}
                 </p>
 
@@ -157,20 +157,20 @@ export default function FeaturesGrid() {
       {/* Feature Modal */}
       <Dialog open={!!activeFeature} onOpenChange={() => setActiveFeature(null)}>
         {activeFeature && (
-          <DialogContent className="max-w-lg rounded-2xl">
+          <DialogContent className="max-w-lg rounded-2xl bg-white dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 text-gray-900 dark:text-white">
             <DialogHeader>
-              <DialogTitle className="text-2xl font-bold">
+              <DialogTitle className="text-2xl font-bold text-gray-900 dark:text-white">
                 {FEATURES[activeFeature].title}
               </DialogTitle>
             </DialogHeader>
 
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
               {FEATURES[activeFeature].desc}
             </p>
 
             <ul className="space-y-3 mb-6">
               {FEATURES[activeFeature].bullets.map((point, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm">
+                <li key={i} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
                   <span className="text-green-500 mt-1">✔</span>
                   <span>{point}</span>
                 </li>

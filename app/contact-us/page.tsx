@@ -36,15 +36,15 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-300">
       {/* ================= HERO ================= */}
       <section className="relative overflow-hidden py-16 sm:py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 -z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 dark:from-orange-950/20 dark:via-pink-950/20 dark:to-purple-950/20 -z-10" />
         <div className="container mx-auto px-6 text-center max-w-4xl">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
             We’re here to help you plan better trips
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             Questions, feedback, or ideas?  
             Our team — powered by AI 🤖 — would love to hear from you.
           </p>
@@ -59,30 +59,30 @@ export default function Contact() {
               emoji: "🛠",
               title: "Support",
               text: "Need help with a trip or your account?",
-              color: "text-orange-600",
+              color: "text-orange-600 dark:text-orange-400",
             },
             {
               emoji: "💡",
               title: "Feedback",
               text: "Share ideas to improve SmartJourney",
-              color: "text-pink-600",
+              color: "text-pink-600 dark:text-pink-400",
             },
             {
               emoji: "🤝",
               title: "Partnerships",
               text: "Let’s build something together",
-              color: "text-purple-600",
+              color: "text-purple-600 dark:text-purple-400",
             },
           ].map((item) => (
             <div
               key={item.title}
-              className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1"
+              className="bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-zinc-800 hover:shadow-xl transition-all hover:-translate-y-1"
             >
               <div className="text-4xl mb-4">{item.emoji}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 {item.title}
               </h3>
-              <p className="text-gray-600 mb-5">{item.text}</p>
+              <p className="text-gray-600 dark:text-gray-300 mb-5">{item.text}</p>
               <span
                 className={`inline-flex items-center gap-1 font-semibold ${item.color}`}
               >
@@ -94,26 +94,26 @@ export default function Contact() {
       </section>
 
       {/* ================= CONTACT FORM ================= */}
-      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-zinc-950">
         <div className="container mx-auto px-6 max-w-2xl">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-3">
-              <Sparkles className="w-4 h-4 text-blue-600" />
-              <span className="text-xs font-semibold text-blue-700">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-800/40 mb-3">
+              <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              <span className="text-xs font-semibold text-blue-700 dark:text-blue-300">
                 AI-Powered Support
               </span>
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
               Send us a message
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-gray-300">
               We usually respond within 24 hours.
             </p>
           </div>
 
           <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 space-y-6"
+            className="bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-zinc-800 space-y-6"
           >
             <Input
               placeholder="Your name"
@@ -121,6 +121,7 @@ export default function Contact() {
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
+              className="bg-white dark:bg-zinc-800 border-gray-200 dark:border-zinc-700 text-gray-900 dark:text-white placeholder:text-gray-400"
               required
             />
             <Input
@@ -130,6 +131,7 @@ export default function Contact() {
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
+              className="bg-white dark:bg-zinc-800 border-gray-200 dark:border-zinc-700 text-gray-900 dark:text-white placeholder:text-gray-400"
               required
             />
             <Textarea
@@ -139,6 +141,7 @@ export default function Contact() {
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
+              className="bg-white dark:bg-zinc-800 border-gray-200 dark:border-zinc-700 text-gray-900 dark:text-white placeholder:text-gray-400"
               required
             />
             <Button
@@ -155,11 +158,11 @@ export default function Contact() {
       {/* ================= AI HELPER ================= */}
       <section className="py-12">
         <div className="container mx-auto px-6 max-w-3xl">
-          <div className="flex items-center gap-4 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-            <div className="h-12 w-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center">
+          <div className="flex items-center gap-4 bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-gray-100 dark:border-zinc-800 shadow-sm">
+            <div className="h-12 w-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 flex items-center justify-center">
               <Bot className="w-6 h-6" />
             </div>
-            <p className="text-gray-700">
+            <p className="text-gray-700 dark:text-gray-300">
               Many questions are answered instantly by our AI Trip Assistant —
               but our human team is always here when you need us.
             </p>
@@ -168,7 +171,7 @@ export default function Contact() {
       </section>
 
       {/* ================= TRUST ================= */}
-      <section className="py-14 bg-gray-50">
+      <section className="py-14 bg-gray-50 dark:bg-zinc-950">
         <div className="container mx-auto px-6 max-w-4xl grid md:grid-cols-3 gap-8 text-center">
           <TrustItem
             icon={<Clock />}
@@ -189,13 +192,13 @@ export default function Contact() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50">
+      <section className="py-20 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 dark:from-orange-950/20 dark:via-pink-950/20 dark:to-purple-950/20">
         <div className="container mx-auto px-6 text-center max-w-3xl">
           <Plane className="mx-auto mb-4 text-orange-500" />
-          <h2 className="text-3xl font-bold mb-3">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
             Ready to plan your next trip?
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
             Let SmartJourney build your itinerary in seconds.
           </p>
           <Link href="/create-new-trip">

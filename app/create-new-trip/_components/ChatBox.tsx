@@ -377,7 +377,7 @@ function ChatBox() {
                         <Bot className='w-6 h-6 text-primary' />
                     </div>
                     <div className='min-w-0'>
-                        <h2 className='text-lg font-bold text-gray-800 dark:text-gray-100 truncate'>SmartJourney Assistant</h2>
+                        <h2 className='text-lg font-bold text-gray-800 dark:text-gray-100 truncate'>TripCraft Assistant</h2>
                         <p className='text-xs text-gray-500 truncate'>Ask me to plan your trip ✈️</p>
                     </div>
                 </div>
@@ -490,7 +490,7 @@ function ChatBox() {
                             <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
                             <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></span>
                         </div>
-                        <span className="text-[10px] text-gray-400 mt-1 px-1">SmartJourney is typing...</span>
+                        <span className="text-[10px] text-gray-400 mt-1 px-1">TripCraft is typing...</span>
                     </div>
                 )}
 

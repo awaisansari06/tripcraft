@@ -105,7 +105,7 @@ function Header() {
         {/* Left Logo */}
         <Link href="/" className='flex gap-2 items-center'>
           <Image src={'/logo.svg'} alt='logo' width={40} height={40} />
-          <h1 className='font-bold text-xl'>SmartJourney</h1>
+          <h1 className='font-bold text-xl'>TripCraft</h1>
         </Link>
 
         {/* DESKTOP: Center Links (≥md) */}
@@ -224,7 +224,7 @@ function Header() {
                     <Menu className="w-8 h-8" />
                   </div>
                   <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                    Welcome to SmartJourney
+                    Welcome to TripCraft
                   </p>
                 </div>
               </SignedOut>

@@ -13,13 +13,13 @@ export default function TermsOfService() {
           Terms of Service
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Simple rules so everyone has a great experience using SmartJourney.
+          Simple rules so everyone has a great experience using TripCraft.
         </p>
       </section>
 
       {/* CONTENT */}
       <section className="max-w-4xl mx-auto px-6 space-y-10 pb-24">
-        <Card title="What SmartJourney does" icon={<Shield />}>
+        <Card title="What TripCraft does" icon={<Shield />}>
           We provide AI-powered travel planning including itineraries, hotel suggestions, and trip organization.
         </Card>
 
@@ -44,7 +44,7 @@ export default function TermsOfService() {
         </Card>
 
         <Card title="Limitation of liability" icon={<Shield />}>
-          SmartJourney isn’t responsible for travel disruptions or losses caused by reliance on AI-generated plans.
+          TripCraft isn’t responsible for travel disruptions or losses caused by reliance on AI-generated plans.
         </Card>
 
         <Card title="Contact" icon={<User />}>

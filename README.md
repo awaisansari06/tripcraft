@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌍 SmartJourney
+# 🌍 TripCraft
 
 ### AI-Powered Trip Planner for Your Perfect Journey
 
@@ -12,7 +12,7 @@
 
 **Plan your perfect trip with AI assistance • Get personalized itineraries • Explore with interactive maps**
 
-[🚀 Live Demo](#) • [📖 Documentation](#) • [🐛 Report Bug](https://github.com/yourusername/smart-journey/issues) • [✨ Request Feature](https://github.com/yourusername/smart-journey/issues)
+[🚀 Live Demo](#) • [📖 Documentation](#) • [🐛 Report Bug](https://github.com/yourusername/tripcraft/issues) • [✨ Request Feature](https://github.com/yourusername/tripcraft/issues)
 
 </div>
 
@@ -21,7 +21,7 @@
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="./public/logo.svg" alt="SmartJourney Logo" width="120" />
+  <img src="./public/logo.svg" alt="TripCraft Logo" width="120" />
 </div>
 
 > **Note:** Add screenshots of your app here for better visual appeal
@@ -97,8 +97,8 @@ You'll need to sign up for the following services (all have free tiers):
 
 1️⃣ **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/smart-journey.git
-cd smart-journey
+git clone https://github.com/yourusername/tripcraft.git
+cd tripcraft
 ```
 
 2️⃣ **Install dependencies**
@@ -174,7 +174,7 @@ Navigate to [http://localhost:3000](http://localhost:3000) 🎉
 ## 📁 Project Structure
 
 ```
-smart-journey/
+tripcraft/
 │
 ├── 📂 app/                          # Next.js App Router
 │   ├── 📂 api/                      # API Routes
@@ -321,7 +321,7 @@ This project uses:
 
 ### Deploy to Vercel (Recommended)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/smart-journey)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/tripcraft)
 
 **Manual Deployment:**
 
@@ -392,9 +392,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact & Support
 
-- **Email:** support@smartjourney.com
-- **GitHub Issues:** [Report a bug](https://github.com/yourusername/smart-journey/issues)
-- **Discussions:** [Join the conversation](https://github.com/yourusername/smart-journey/discussions)
+- **Email:** support@tripcraft.com
+- **GitHub Issues:** [Report a bug](https://github.com/yourusername/tripcraft/issues)
+- **Discussions:** [Join the conversation](https://github.com/yourusername/tripcraft/discussions)
 
 ---
 
@@ -419,6 +419,6 @@ Special thanks to these amazing projects and services:
 
 ### Made with ❤️ by the Awais Ansari
 
-**[⬆ Back to Top](#-smartjourney)**
+**[⬆ Back to Top](#-tripcraft)**
 
 </div>

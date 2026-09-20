@@ -9,32 +9,33 @@ import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: {
-    default: "SmartJourney — AI Trip Planner",
-    template: "%s | SmartJourney",
+    default: "TripCraft — AI Trip Planner",
+    template: "%s | TripCraft",
   },
   description:
-    "Plan your perfect trip in seconds with AI. SmartJourney creates day-by-day itineraries, hotel picks, and local gems — all tailored to your budget and style.",
+    "Plan your perfect trip in seconds with AI. TripCraft creates day-by-day itineraries, hotel picks, and local gems — all tailored to your budget and style.",
   keywords: [
     "AI trip planner",
     "travel itinerary",
-    "smart journey",
+    "trip craft",
+    "tripcraft",
     "vacation planner",
     "hotel recommendations",
     "travel AI",
   ],
-  authors: [{ name: "SmartJourney" }],
+  authors: [{ name: "TripCraft" }],
   openGraph: {
-    title: "SmartJourney — AI Trip Planner",
+    title: "TripCraft — AI Trip Planner",
     description:
       "Plan your perfect trip in seconds with AI. Day-by-day itineraries, hotels & local gems.",
-    url: "https://smartjourney-v2.vercel.app/",
-    siteName: "SmartJourney",
+    url: "https://tripcraft-v2.vercel.app/",
+    siteName: "TripCraft",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SmartJourney — AI Trip Planner",
+    title: "TripCraft — AI Trip Planner",
     description: "Plan your perfect trip in seconds with AI.",
   },
   icons: {

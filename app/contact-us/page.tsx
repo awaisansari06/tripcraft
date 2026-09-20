@@ -64,7 +64,7 @@ export default function Contact() {
             {
               emoji: "💡",
               title: "Feedback",
-              text: "Share ideas to improve SmartJourney",
+              text: "Share ideas to improve TripCraft",
               color: "text-pink-600 dark:text-pink-400",
             },
             {
@@ -199,7 +199,7 @@ export default function Contact() {
             Ready to plan your next trip?
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Let SmartJourney build your itinerary in seconds.
+            Let TripCraft build your itinerary in seconds.
           </p>
           <Link href="/create-new-trip">
             <Button className="bg-gradient-to-r from-orange-500 to-pink-600 text-white rounded-full px-8 py-6 text-lg hover:scale-105">

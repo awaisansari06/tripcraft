@@ -13,7 +13,7 @@ export default function Footer() {
                     <div className="space-y-3">
                         <div className="flex items-center gap-2 font-bold text-2xl">
                             <Image src='/logo.svg' alt='logo' width={40} height={40} />
-                            SmartJourney
+                            TripCraft
                         </div>
                         <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
                             Your AI-powered travel assistant. Plan, explore and save trips in seconds.
@@ -63,8 +63,8 @@ export default function Footer() {
                 {/* Bottom Row */}
                 <div className="mt-10 flex flex-col gap-6 border-t border-gray-100 dark:border-gray-800 pt-8 text-sm text-gray-500 dark:text-gray-400 md:flex-row md:items-center md:justify-between">
                     <div className="flex flex-col gap-2">
-                        <p>© {new Date().getFullYear()} SmartJourney. All rights reserved.</p>
-                        <p className="text-xs">Made with ❤️ by SmartJourney Team</p>
+                        <p>© {new Date().getFullYear()} TripCraft. All rights reserved.</p>
+                        <p className="text-xs">Made with ❤️ by TripCraft Team</p>
                     </div>
 
                     <div className="flex gap-6 items-center">

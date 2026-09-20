@@ -11,7 +11,7 @@ function EmptyState() {
                 <Plane className='w-10 h-10 text-gray-400 dark:text-gray-500' />
             </div>
             <h2 className='text-xl font-bold text-gray-800 dark:text-gray-200 mb-2'>You don't have any trip planned!</h2>
-            <p className='text-gray-500 dark:text-gray-400 mb-8 max-w-md text-center'>Start planning your next adventure with SmartJourney AI in just a few clicks.</p>
+            <p className='text-gray-500 dark:text-gray-400 mb-8 max-w-md text-center'>Start planning your next adventure with TripCraft AI in just a few clicks.</p>
 
             <Link href={'/create-new-trip'}>
                 <GradientButton className='px-8 h-12 text-base font-semibold shadow-lg shadow-orange-500/20'>
